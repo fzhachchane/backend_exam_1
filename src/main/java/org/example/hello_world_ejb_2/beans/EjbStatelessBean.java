@@ -24,7 +24,7 @@ public class EjbStatelessBean implements EjbStateless {
 
         cdToBorrow.ifPresent(cd -> {
             cd.setAvailable(false);
-            System.out.println("CD borrowed: " + cd.getTitle() + " by " + cd.getArtist());
+            System.out.println("CD emprunté: " + cd.getTitle() + " by " + cd.getArtist());
         });
     }
 
@@ -37,7 +37,7 @@ public class EjbStatelessBean implements EjbStateless {
 
         cdToReturn.ifPresent(cd -> {
             cd.setAvailable(true);
-            System.out.println("CD returned: " + cd.getTitle() + " by " + cd.getArtist());
+            System.out.println("CD retourné: " + cd.getTitle() + " by " + cd.getArtist());
         });
     }
 }
